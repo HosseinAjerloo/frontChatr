@@ -20,6 +20,8 @@
     --color-eea75f: #eea75f;
     --color-079567: #079567;
     --color-61c2a1: #61c2a1;
+    --color-268ec8: #268ec8;
+    --color-012b38: #012b38;
 }
 body,*{
     font-family: 'yekan';
@@ -37,4 +39,7 @@ body,*{
 }
 .overflow-y-scroll::-webkit-scrollbar-thumb:hover {
     background: white;
+}
+@utility eleHover{
+  @apply hover:bg-012b38 cursor-pointer
 }
