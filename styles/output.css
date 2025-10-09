@@ -312,6 +312,9 @@
   .h-screen {
     height: 100vh;
   }
+  .w-5 {
+    width: calc(var(--spacing) * 5);
+  }
   .w-6 {
     width: calc(var(--spacing) * 6);
   }
@@ -339,11 +342,32 @@
   .w-\[27px\] {
     width: 27px;
   }
+  .w-\[40\%\] {
+    width: 40%;
+  }
+  .w-\[42\%\] {
+    width: 42%;
+  }
   .w-\[49\%\] {
     width: 49%;
   }
+  .w-\[50\%\] {
+    width: 50%;
+  }
   .w-\[50px\] {
     width: 50px;
+  }
+  .w-\[57\%\] {
+    width: 57%;
+  }
+  .w-\[58\%\] {
+    width: 58%;
+  }
+  .w-\[59\%\] {
+    width: 59%;
+  }
+  .w-\[60\%\] {
+    width: 60%;
   }
   .w-\[60px\] {
     width: 60px;
@@ -894,9 +918,19 @@
       width: 39%;
     }
   }
+  .md\:w-\[42\%\] {
+    @media (width >= 48rem) {
+      width: 42%;
+    }
+  }
   .md\:w-\[50\%\] {
     @media (width >= 48rem) {
       width: 50%;
+    }
+  }
+  .md\:w-\[57\%\] {
+    @media (width >= 48rem) {
+      width: 57%;
     }
   }
   .md\:w-\[60\%\] {
@@ -964,6 +998,16 @@
   .xl\:w-\[40\%\] {
     @media (width >= 80rem) {
       width: 40%;
+    }
+  }
+  .xl\:w-\[42\%\] {
+    @media (width >= 80rem) {
+      width: 42%;
+    }
+  }
+  .xl\:w-\[57\%\] {
+    @media (width >= 80rem) {
+      width: 57%;
     }
   }
   .\32 xl\:w-\[20\%\] {
