@@ -5,14 +5,14 @@ const duration = 500;
 hambergerElement.addEventListener("click", function (e) {
   hamberGerAnimation(hambergerElement).then((result) => {
     console.log(result);
-    
+
     handelResponsive();
   });
 });
 closehambergerElement.addEventListener("click", function (e) {
   hamberGerAnimation(closehambergerElement).then((result) => {
     console.log(result);
-    
+
     handelResponsive(false);
   });
 });
@@ -34,10 +34,19 @@ const handelResponsive = (state = true) => {
   }
 };
 
+window.addEventListener("resize", function () {
+  const innerWidth = window.innerWidth;
+
+  if (innerWidth > 1280) {
+    aside.classList.remove("w-full");
+    aside.classList.add("xl:w-1/5", "w-[0px]");
+    section.classList.add("w-full", "xl:w-4/5", "opacity-100");
+  }
+});
 const hamberGerAnimation = async (elem) => {
-    const allAnimation=[];
+  const allAnimation = [];
   [...elem.children].forEach((element, index) => {
-    const animate=element.animate(
+    const animate = element.animate(
       [
         {
           offset: 0.2,
@@ -61,8 +70,8 @@ const hamberGerAnimation = async (elem) => {
         easing: "ease-in-out",
       }
     );
-    
-    allAnimation.push(animate.finished)
+
+    allAnimation.push(animate.finished);
   });
-  return Promise.all(allAnimation)
+  return Promise.all(allAnimation);
 };
